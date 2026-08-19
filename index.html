@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Portal Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Sidebar Navigation -->
+    <aside class="sidebar">
+        <div class="logo">
+            <h2>PortalHub</h2>
+        </div>
+        <nav class="nav-menu">
+            <button class="nav-item active" data-target="home-section">🏠 Home</button>
+            <button class="nav-item" data-target="games-section">🎮 Game Center</button>
+            <button class="nav-item" data-target="social-section">📱 Social Media</button>
+            <button class="nav-item" data-target="browser-section">🔒 Secure Browser</button>
+        </nav>
+        <div class="sidebar-footer">
+            <p>Status: Secure</p>
+        </div>
+    </aside>
+
+    <!-- Main Content Area -->
+    <main class="main-content">
+        <header class="top-bar">
+            <h1 id="page-title">Welcome back, Admin</h1>
+            <div class="profile">⚙️ Settings</div>
+        </header>
+
+        <!-- Dynamic Content Sections -->
+        
+        <!-- HOME SECTION -->
+        <section id="home-section" class="content-panel active-panel">
+            <div class="dashboard-grid">
+                <div class="card">
+                    <h3>Game Center</h3>
+                    <p>Manage, deploy, and organize application links easily from one central location.</p>
+                    <button class="btn" onclick="switchTab('games-section')">Open Games</button>
+                </div>
+                <div class="card">
+                    <h3>Social Media</h3>
+                    <p>Connect and monitor communication streams or integrate platform integrations.</p>
+                    <button class="btn" onclick="switchTab('social-section')">Open Social</button>
+                </div>
+                <div class="card">
+                    <h3>Secure Browser</h3>
+                    <p>Enforce strict blocking policies, disable external scripts, and restrict tracking.</p>
+                    <button class="btn btn-secure" onclick="switchTab('browser-section')">Open Browser</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- GAMES SECTION -->
+        <section id="games-section" class="content-panel">
+            <h2>Game Center Dashboard</h2>
+            <p class="section-desc">Add and organize your standard application shortcuts below.</p>
+            <div class="placeholder-box">
+                <p>No applications added yet. Use the deployment settings to link static web packages.</p>
+            </div>
+        </section>
+
+        <!-- SOCIAL SECTION -->
+        <section id="social-section" class="content-panel">
+            <h2>Social Portals</h2>
+            <p class="section-desc">Manage integrated communication feeds and platform alerts.</p>
+            <div class="placeholder-box">
+                <p>Social media API modules are offline. Configure credentials in backend settings.</p>
+            </div>
+        </section>
+
+        <!-- BROWSER SECTION -->
+        <section id="browser-section" class="content-panel">
+            <h2>Secure Browser Environment</h2>
+            <p class="section-desc">Local client sandboxing tools and strict content filter policies.</p>
+            <div class="placeholder-box">
+                <p>Security filters are actively handling background requests. Tracking elements blocked.</p>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Link the JavaScript behavior file -->
+    <script src="script.js"></script>
+</body>
+</html>
